@@ -24,6 +24,14 @@ body {
   background: linear-gradient(to bottom, #17ead9 0%, #6078ea 100%);
 }
 
+/* Hero Button */
+.submit-btn {
+  background: linear-gradient(#17ead9, #6078ea);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 10px;
+  color: white;
+}
+
 /* Responsive adjustments for navbar */
 @media (min-width: 992px) {
   .navbar-nav {
