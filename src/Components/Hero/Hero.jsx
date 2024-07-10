@@ -9,8 +9,8 @@ const Hero = () => {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.5, // Delay each child animation by 0.5 seconds
-        staggerChildren: 0.2, // Stagger each animation by 0.2 seconds
+        delayChildren: 0.5,
+        staggerChildren: 0.2,
       },
     },
   };
@@ -44,11 +44,13 @@ const Hero = () => {
         </motion.h2>
         <motion.img
           src={InnovationPana}
-          className="mt-5"
+          className="mt-5 img-fluid"
           alt=""
           width={200}
+          style={{ maxWidth: "100%", height: "auto" }} // Ensures image responsiveness
           variants={itemVariants}
         />
+
         <motion.button
           className="submit-btn mt-5 px-4 py-2 border-0 text-center"
           variants={itemVariants}
