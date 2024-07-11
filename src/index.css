@@ -32,6 +32,17 @@ body {
   color: white;
 }
 
+.idea-text {
+  background: linear-gradient(to right, #000, #666);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.idea--submission-container {
+  background: linear-gradient(to bottom, #9ba9ff 0%, #5d6599 100%);
+  height: auto;
+}
+
 /* Responsive adjustments for navbar */
 @media (min-width: 992px) {
   .navbar-nav {
