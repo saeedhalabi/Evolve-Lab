@@ -30,6 +30,13 @@ body {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   border-radius: 10px;
   color: white;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(#6078ea, #17ead9);
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 5px;
 }
 
 .idea-text {
