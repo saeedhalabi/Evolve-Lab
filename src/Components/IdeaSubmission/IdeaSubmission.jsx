@@ -117,7 +117,7 @@ const IdeaSubmission = () => {
               <option value="product">PRODUCT</option>
             </select>
           </div>
-          <button type="submit" className="px-4 py-2 ml-4 border-0 submit-btn">
+          <button type="submit" className="px-4 py-2 ml-4 mt-4 border-0 submit-btn">
             Submit Idea
           </button>
         </form>

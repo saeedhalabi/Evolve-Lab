@@ -20,7 +20,7 @@ body {
 
 /* Hero section styles */
 .hero {
-  height: 100vh;
+  padding-bottom: 50px;
   background: linear-gradient(to bottom, #17ead9 0%, #6078ea 100%);
 }
 
@@ -48,6 +48,11 @@ body {
 .idea--submission-container {
   background: linear-gradient(to bottom, #9ba9ff 0%, #5d6599 100%);
   height: auto;
+  padding-bottom: 55px;
+}
+
+.filter--idea--background {
+  background-color: #f0f4f8;
 }
 
 /* Responsive adjustments for navbar */
