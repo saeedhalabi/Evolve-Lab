@@ -1,12 +1,82 @@
-import React from "react";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const IdeaSubmission = () => {
+  // State variables for form inputs, error message, and success message
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false);
+
+  // Handle form submission
+  const handleSubmit = e => {
+    e.preventDefault();
+    if (!title || !description || !selectedCategory) {
+      setError("All fields are required.");
+      setSuccess(false);
+
+      // Clear error message after 5 seconds
+      setTimeout(() => {
+        setError("");
+      }, 5000);
+    } else {
+      setError("");
+      setSuccess(true);
+      console.log("Form submitted:", { title, description, selectedCategory });
+
+      // Clear success message after 5 seconds
+      setTimeout(() => {
+        setSuccess(false);
+      }, 5000);
+    }
+  };
+
   return (
     <div className="d-flex align-items-center justify-content-center flex-column idea--submission-container">
+      <AnimatePresence>
+        {error && (
+          <motion.div
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -50, opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="alert alert-danger sticky-alert"
+            role="alert"
+          >
+            <div className="d-flex gap-4">
+              <span>
+                <i className="fa-solid fa-circle-exclamation"></i>
+              </span>
+              <div className="d-flex flex-column gap-2">
+                <h6 className="mb-0">Enter valid information</h6>
+                <p className="mb-0">{error}</p>
+              </div>
+            </div>
+          </motion.div>
+        )}
+        {success && (
+          <motion.div
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -50, opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="alert alert-success sticky-alert"
+            role="alert"
+          >
+            <div className="d-flex gap-4">
+              <span>
+                <i className="fa-regular fa-circle-check"></i>
+              </span>
+              <div>Information Submitted</div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <h1 className="text-uppercase idea-text mt-5">Idea Submission</h1>
-      {/* Form */}
       <div className="container mt-5 form-content">
-        <form className="text-center">
+        <form className="text-center" onSubmit={handleSubmit}>
           <div className="mb-3">
             <label className="form-label visually-hidden">Text Input</label>
             <input
@@ -14,6 +84,8 @@ const IdeaSubmission = () => {
               className="form-control"
               id="textInput"
               placeholder="Title..."
+              value={title}
+              onChange={e => setTitle(e.target.value)}
             />
           </div>
           <div className="mb-3">
@@ -23,11 +95,20 @@ const IdeaSubmission = () => {
               id="textArea"
               rows="3"
               placeholder="Description"
+              value={description}
+              onChange={e => setDescription(e.target.value)}
             ></textarea>
           </div>
           <div className="mb-3">
-            <label className="form-label visually-hidden">Dropdown</label>
-            <select className="form-select" id="dropdown">
+            <label className="form-label visually-hidden" htmlFor="dropdown">
+              Dropdown
+            </label>
+            <select
+              className="form-select"
+              id="dropdown"
+              value={selectedCategory}
+              onChange={e => setSelectedCategory(e.target.value)}
+            >
               <option defaultValue>Choose a Category</option>
               <option value="tech">TECHNOLOGY</option>
               <option value="business">BUSINESS</option>
@@ -41,6 +122,16 @@ const IdeaSubmission = () => {
           </button>
         </form>
       </div>
+      <style jsx>{`
+        .sticky-alert {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          z-index: 1000;
+          margin-top: 0;
+          border-radius: 0;
+        }
+      `}</style>
     </div>
   );
 };
