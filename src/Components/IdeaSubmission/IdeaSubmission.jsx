@@ -1,31 +1,33 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const IdeaSubmission = () => {
-  // State variables for form inputs, error message, and success message
+const IdeaSubmission = ({ onIdeaSubmit }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
 
-  // Handle form submission
   const handleSubmit = e => {
     e.preventDefault();
     if (!title || !description || !selectedCategory) {
       setError("All fields are required.");
       setSuccess(false);
-
-      // Clear error message after 5 seconds
       setTimeout(() => {
         setError("");
       }, 5000);
     } else {
       setError("");
       setSuccess(true);
-      console.log("Form submitted:", { title, description, selectedCategory });
-
-      // Clear success message after 5 seconds
+      const newIdea = {
+        title,
+        description,
+        selectedCategory,
+      };
+      onIdeaSubmit(newIdea);
+      setTitle("");
+      setDescription("");
+      setSelectedCategory("");
       setTimeout(() => {
         setSuccess(false);
       }, 5000);
@@ -117,7 +119,10 @@ const IdeaSubmission = () => {
               <option value="product">PRODUCT</option>
             </select>
           </div>
-          <button type="submit" className="px-4 py-2 ml-4 mt-4 border-0 submit-btn">
+          <button
+            type="submit"
+            className="px-4 py-2 ml-4 mt-4 border-0 submit-btn"
+          >
             Submit Idea
           </button>
         </form>
