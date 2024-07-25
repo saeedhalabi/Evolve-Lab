@@ -6,7 +6,6 @@ import FilterIdea from "./Components/FilterIdea/FilterIdea";
 const App = () => {
   const [submittedIdeas, setSubmittedIdeas] = useState([]);
 
-  // Function to handle submission of new idea from IdeaSubmission component
   const handleIdeaSubmission = newIdea => {
     setSubmittedIdeas([...submittedIdeas, newIdea]);
   };

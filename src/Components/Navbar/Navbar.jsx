@@ -1,3 +1,4 @@
+// Navbar.js
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -34,27 +35,27 @@ const Navbar = () => {
         <div className="collapse navbar-collapse justify-content-lg-end flex-lg-row flex-column">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <a className="nav-link active" aria-current="page" href="#home">
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#comments">
                 Comments
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#createIdea">
                 Create Idea
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#all-ideas">
                 All Ideas
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#collaborate">
                 Collaborate
               </a>
             </li>
@@ -102,27 +103,31 @@ const Navbar = () => {
               {/* Sidebar links */}
               <ul className="navbar-nav gap-3 mt-3">
                 <motion.li className="nav-item" whileHover={{ scale: 1.1 }}>
-                  <a className="nav-link active" aria-current="page" href="#">
+                  <a
+                    className="nav-link active"
+                    aria-current="page"
+                    href="#home"
+                  >
                     Home
                   </a>
                 </motion.li>
                 <motion.li className="nav-item" whileHover={{ scale: 1.1 }}>
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="#comments">
                     Comments
                   </a>
                 </motion.li>
                 <motion.li className="nav-item" whileHover={{ scale: 1.1 }}>
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="#createIdea">
                     Create Idea
                   </a>
                 </motion.li>
                 <motion.li className="nav-item" whileHover={{ scale: 1.1 }}>
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="#all-ideas">
                     All Ideas
                   </a>
                 </motion.li>
                 <motion.li className="nav-item" whileHover={{ scale: 1.1 }}>
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="#collaborate">
                     Collaborate
                   </a>
                 </motion.li>

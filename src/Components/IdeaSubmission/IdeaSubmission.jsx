@@ -2,34 +2,40 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const IdeaSubmission = ({ onIdeaSubmit }) => {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("");
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState(false);
+  // State variables to manage form input values and error/success messages
+  const [title, setTitle] = useState(""); // Title of the idea
+  const [description, setDescription] = useState(""); // Description of the idea
+  const [selectedCategory, setSelectedCategory] = useState(""); // Selected category of the idea
+  const [error, setError] = useState(""); // Error message
+  const [success, setSuccess] = useState(false); // Success message state
 
+  // Function to handle form submission
   const handleSubmit = e => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent the default form submission behavior
+
+    // Check if all fields are filled
     if (!title || !description || !selectedCategory) {
-      setError("All fields are required.");
-      setSuccess(false);
+      setError("All fields are required."); // Set error message if any field is empty
+      setSuccess(false); // Reset success message
       setTimeout(() => {
-        setError("");
+        setError(""); // Clear error message after 5 seconds
       }, 5000);
     } else {
-      setError("");
-      setSuccess(true);
+      setError(""); // Clear any existing error message
+      setSuccess(true); // Set success message
       const newIdea = {
         title,
         description,
         selectedCategory,
       };
-      onIdeaSubmit(newIdea);
+      onIdeaSubmit(newIdea); // Call the onIdeaSubmit function passed via props with the new idea
+
+      // Reset form fields
       setTitle("");
       setDescription("");
       setSelectedCategory("");
       setTimeout(() => {
-        setSuccess(false);
+        setSuccess(false); // Clear success message after 5 seconds
       }, 5000);
     }
   };
@@ -37,12 +43,13 @@ const IdeaSubmission = ({ onIdeaSubmit }) => {
   return (
     <div className="d-flex align-items-center justify-content-center flex-column idea--submission-container">
       <AnimatePresence>
+        {/* Display error message with animation */}
         {error && (
           <motion.div
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -50, opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{ y: -50, opacity: 0 }} // Initial animation state
+            animate={{ y: 0, opacity: 1 }} // Animation state on enter
+            exit={{ y: -50, opacity: 0 }} // Animation state on exit
+            transition={{ duration: 0.5 }} // Animation duration
             className="alert alert-danger sticky-alert"
             role="alert"
           >
@@ -57,12 +64,13 @@ const IdeaSubmission = ({ onIdeaSubmit }) => {
             </div>
           </motion.div>
         )}
+        {/* Display success message with animation */}
         {success && (
           <motion.div
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -50, opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{ y: -50, opacity: 0 }} // Initial animation state
+            animate={{ y: 0, opacity: 1 }} // Animation state on enter
+            exit={{ y: -50, opacity: 0 }} // Animation state on exit
+            transition={{ duration: 0.5 }} // Animation duration
             className="alert alert-success sticky-alert"
             role="alert"
           >
@@ -79,6 +87,7 @@ const IdeaSubmission = ({ onIdeaSubmit }) => {
       <h1 className="text-uppercase idea-text mt-5">Idea Submission</h1>
       <div className="container mt-5 form-content">
         <form className="text-center" onSubmit={handleSubmit}>
+          {/* Input for the idea title */}
           <div className="mb-3">
             <label className="form-label visually-hidden">Text Input</label>
             <input
@@ -90,6 +99,7 @@ const IdeaSubmission = ({ onIdeaSubmit }) => {
               onChange={e => setTitle(e.target.value)}
             />
           </div>
+          {/* Textarea for the idea description */}
           <div className="mb-3">
             <label className="form-label visually-hidden">Textarea</label>
             <textarea
@@ -101,6 +111,7 @@ const IdeaSubmission = ({ onIdeaSubmit }) => {
               onChange={e => setDescription(e.target.value)}
             ></textarea>
           </div>
+          {/* Dropdown for selecting the idea category */}
           <div className="mb-3">
             <label className="form-label visually-hidden" htmlFor="dropdown">
               Dropdown
@@ -119,6 +130,7 @@ const IdeaSubmission = ({ onIdeaSubmit }) => {
               <option value="product">PRODUCT</option>
             </select>
           </div>
+          {/* Submit button */}
           <button
             type="submit"
             className="px-4 py-2 ml-4 mt-4 border-0 submit-btn"
@@ -127,6 +139,7 @@ const IdeaSubmission = ({ onIdeaSubmit }) => {
           </button>
         </form>
       </div>
+      {/* Inline styling for sticky alerts */}
       <style jsx>{`
         .sticky-alert {
           position: fixed;
