@@ -84,6 +84,95 @@ body {
   background-color: #00a9cc; /* Darker color when hovering */
 }
 
+.custom-btn {
+  background-color: #ff4500;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.custom-btn:hover {
+  background-color: #ff6347; /* Slightly different shade on hover */
+  transform: translateY(-2px); /* Slightly lift the button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+.filter-idea-background {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 2rem 0;
+}
+
+.modern-card {
+  border: none; /* Remove default border */
+  border-radius: 10px; /* Rounded corners */
+  background: #ffffff; /* White background */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.modern-card:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.card-title {
+  font-size: 1.25rem; /* Larger title font size */
+  font-weight: 600; /* Bold title */
+}
+
+.card-text {
+  font-size: 1rem; /* Standard text size */
+  line-height: 1.5; /* Better line spacing */
+}
+
+.image-container img {
+  max-width: 100%;
+  border-radius: 10px; /* Rounded corners for the image */
+}
+
+.idea-title h1 {
+  font-size: 2rem; /* Adjust title size */
+  font-weight: 700; /* Bold title */
+}
+.modern-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modern-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+.category {
+  font-style: italic;
+  color: #007bff;
+}
+
+.vote-button {
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.vote-button:hover {
+  background-color: #f0f0f0;
+}
+
 /* Responsive adjustments for navbar */
 @media (min-width: 992px) {
   .navbar-nav {

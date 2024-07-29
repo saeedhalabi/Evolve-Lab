@@ -1,6 +1,6 @@
-// Navbar.js
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-scroll";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Toggler from "../../assets/menu.png";
@@ -35,29 +35,66 @@ const Navbar = () => {
         <div className="collapse navbar-collapse justify-content-lg-end flex-lg-row flex-column">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#home">
+              <Link
+                className="nav-link"
+                activeClass="active"
+                to="home"
+                spy
+                smooth
+                duration={500}
+                onClick={closeMenu}
+              >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#comments">
+              <Link
+                className="nav-link"
+                to="comments"
+                spy
+                smooth
+                duration={500}
+                onClick={closeMenu}
+              >
                 Comments
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#createIdea">
-                Create Idea
-              </a>
+              <Link
+                className="nav-link"
+                to="category"
+                spy
+                smooth
+                duration={500}
+                onClick={closeMenu}
+              >
+                Category
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#all-ideas">
+              <Link
+                className="nav-link"
+                to="all-ideas"
+                spy
+                smooth
+                duration={500}
+                offset={400}
+                onClick={closeMenu}
+              >
                 All Ideas
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#collaborate">
+              <Link
+                className="nav-link"
+                to="collaborate"
+                spy
+                smooth
+                duration={500}
+                onClick={closeMenu}
+              >
                 Collaborate
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -103,33 +140,65 @@ const Navbar = () => {
               {/* Sidebar links */}
               <ul className="navbar-nav gap-3 mt-3">
                 <motion.li className="nav-item" whileHover={{ scale: 1.1 }}>
-                  <a
-                    className="nav-link active"
-                    aria-current="page"
-                    href="#home"
+                  <Link
+                    className="nav-link"
+                    activeClass="active"
+                    to="home"
+                    spy
+                    smooth
+                    duration={500}
+                    onClick={closeMenu}
                   >
                     Home
-                  </a>
+                  </Link>
                 </motion.li>
                 <motion.li className="nav-item" whileHover={{ scale: 1.1 }}>
-                  <a className="nav-link" href="#comments">
+                  <Link
+                    className="nav-link"
+                    to="comments"
+                    spy
+                    smooth
+                    duration={500}
+                    onClick={closeMenu}
+                  >
                     Comments
-                  </a>
+                  </Link>
                 </motion.li>
                 <motion.li className="nav-item" whileHover={{ scale: 1.1 }}>
-                  <a className="nav-link" href="#createIdea">
+                  <Link
+                    className="nav-link"
+                    to="createIdea"
+                    spy
+                    smooth
+                    duration={500}
+                    onClick={closeMenu}
+                  >
                     Create Idea
-                  </a>
+                  </Link>
                 </motion.li>
                 <motion.li className="nav-item" whileHover={{ scale: 1.1 }}>
-                  <a className="nav-link" href="#all-ideas">
+                  <Link
+                    className="nav-link"
+                    to="all-ideas"
+                    spy
+                    smooth
+                    duration={500}
+                    onClick={closeMenu}
+                  >
                     All Ideas
-                  </a>
+                  </Link>
                 </motion.li>
                 <motion.li className="nav-item" whileHover={{ scale: 1.1 }}>
-                  <a className="nav-link" href="#collaborate">
+                  <Link
+                    className="nav-link"
+                    to="collaborate"
+                    spy
+                    smooth
+                    duration={500}
+                    onClick={closeMenu}
+                  >
                     Collaborate
-                  </a>
+                  </Link>
                 </motion.li>
               </ul>
             </motion.div>

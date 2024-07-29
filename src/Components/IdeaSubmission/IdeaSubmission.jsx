@@ -41,7 +41,10 @@ const IdeaSubmission = ({ onIdeaSubmit }) => {
   };
 
   return (
-    <div className="d-flex align-items-center justify-content-center flex-column idea--submission-container">
+    <div
+      className="d-flex align-items-center justify-content-center flex-column idea--submission-container"
+      id="createIdea"
+    >
       <AnimatePresence>
         {/* Display error message with animation */}
         {error && (
