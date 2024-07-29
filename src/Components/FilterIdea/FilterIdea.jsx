@@ -67,12 +67,6 @@ const FilterIdea = ({ submittedIdeas }) => {
             >
               Business
             </button>
-            <button
-              className="btn btn-warning px-4 rounded-pill"
-              onClick={() => filterIdeasByCategory("Popular")}
-            >
-              Popular
-            </button>
           </div>
 
           {/* Image container */}
