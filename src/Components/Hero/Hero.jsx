@@ -35,7 +35,7 @@ const Hero = () => {
         variants={containerVariants}
       >
         <motion.h1 className="text-center fw-bold" variants={itemVariants}>
-          Innovate Hub
+          Evolve Lab
         </motion.h1>
         <motion.h2
           className="fs-6 text-center text-wrap text-white fw-light mt-4"
