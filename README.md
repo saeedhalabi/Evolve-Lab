@@ -54,6 +54,10 @@ Usage
 -   **Vote on Ideas**: Click the vote button next to an idea to cast your vote.
 -   **View Comments**: Access the Comments section to read and add comments.
 
+Live Demo
+---------
+<a href="https://evolve-lab.netlify.app">Demo</a>
+
 Contributing
 ------------
 
