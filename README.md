@@ -22,6 +22,11 @@ Components
 -   **Comments**: A section for users to leave comments.
 -   **Footer**: Displays copyright and contact information.
 
+Design
+------
+
+View the <a href="https://www.figma.com/design/ZVjIDmZ9nRMspKsZEenMlD/Innovate-Hub?node-id=0-1&t=Vro3leR4rB8lzW2f-1">Figma Design</a> for Evolve Lab to see the project layout and UI/UX design.
+
 Setup
 -----
 
