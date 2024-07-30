@@ -13,8 +13,8 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col-12 mb-4">
-            <h5 className="text-uppercase mb-4">Evolve Lab</h5>
-            <p>
+            <h5 className="text-uppercase mb-4 footer-title">Evolve Lab</h5>
+            <p className="footer-text">
               Evolve Lab is committed to enhancing work environments by
               providing a platform where employees can share and discuss
               suggestions for improvement. Join us in creating a better
@@ -23,7 +23,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="text-center py-3" style={{ backgroundColor: "#23272b" }}>
+      <div className="text-center py-3 footer-date" style={{ backgroundColor: "#23272b" }}>
         &copy; {currentYear} InnovateHub. All rights reserved.
       </div>
     </footer>

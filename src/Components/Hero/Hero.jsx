@@ -38,7 +38,7 @@ const Hero = () => {
           Evolve Lab
         </motion.h1>
         <motion.h2
-          className="fs-6 text-center text-wrap text-white fw-light mt-4"
+          className="fs-6 text-center text-wrap text-white fw-light mt-4 hero--paragraph"
           variants={itemVariants}
         >
           Submit and share your innovative ideas with the team

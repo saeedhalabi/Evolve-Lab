@@ -244,3 +244,8 @@ body {
     gap: 40px;
   }
 }
+@media (max-width: 500px) {
+  * {
+    font-size: 0.7rem;
+  }
+}
