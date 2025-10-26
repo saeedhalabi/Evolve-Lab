@@ -33,7 +33,7 @@ const Navbar = () => {
         </motion.button>
 
         <div className="collapse navbar-collapse justify-content-lg-end flex-lg-row flex-column">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav cursor-pointer">
             <li className="nav-item">
               <Link
                 className="nav-link"
