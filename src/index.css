@@ -236,6 +236,10 @@ body {
   border: 1px solid #f5c6cb;
 }
 
+.nav-link {
+  cursor: pointer;
+}
+
 /* Responsive adjustments for navbar */
 @media (min-width: 992px) {
   .navbar-nav {
