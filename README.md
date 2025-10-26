@@ -79,28 +79,13 @@ If you'd like to contribute to the project, please fork the repository and creat
 
 ## 📸 Screenshots
 
-###  🖼️ Hero Section
 ![Hero Section](./screenshots/hero-section.jpg)
 
-### 💡 Idea Submission
 ![Idea Submission](./screenshots/idea-submission-section.jpg)
 
-### 🔍 Filtering
 ![Filtering](./screenshots/filtering-section.jpg)
 
-### 📘 Footer
 ![Footer](./screenshots/footer-section.jpg)
 
 
 ---
-
-## 📬 Contact
-
-Have questions or feedback? Let’s connect!  
-
-📧 [Email Me](mailto:saeedrhalabi@gmail.com)  
-💼 [LinkedIn](https://www.linkedin.com/in/saeed-halabi)  
-🌐 [Portfolio](https://saeedhalabi.com)  
-
----
-
