@@ -74,6 +74,24 @@ If you'd like to contribute to the project, please fork the repository and creat
 5.  Create a pull request on GitHub.
 
 
+
+---
+
+## 📸 Screenshots
+
+###  🖼️ Hero Section
+![Hero Section](./screenshots/hero-section.jpg)
+
+### 💡 Idea Submission
+![Idea Submission](./screenshots/idea-submission-section.jpg)
+
+### 🔍 Filtering
+![Filtering](./screenshots/filtering-section.jpg)
+
+### 📘 Footer
+![Footer](./screenshots/footer-section.jpg)
+
+
 ---
 
 ## 📬 Contact

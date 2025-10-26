@@ -1,7 +1,6 @@
-// src/components/Footer.js
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap-icons/font/bootstrap-icons.css"; // For Bootstrap Icons
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -23,7 +22,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="text-center py-3 footer-date" style={{ backgroundColor: "#23272b" }}>
+      <div
+        className="text-center py-3 footer-date"
+        style={{ backgroundColor: "#23272b" }}
+      >
         &copy; {currentYear} InnovateHub. All rights reserved.
       </div>
     </footer>

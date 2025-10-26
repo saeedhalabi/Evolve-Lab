@@ -70,10 +70,10 @@ const IdeaSubmission = ({ onIdeaSubmit }) => {
         {/* Display success message with animation */}
         {success && (
           <motion.div
-            initial={{ y: -50, opacity: 0 }} // Initial animation state
-            animate={{ y: 0, opacity: 1 }} // Animation state on enter
-            exit={{ y: -50, opacity: 0 }} // Animation state on exit
-            transition={{ duration: 0.5 }} // Animation duration
+            initial={{ y: -50, opacity: 0 }} 
+            animate={{ y: 0, opacity: 1 }} 
+            exit={{ y: -50, opacity: 0 }} 
+            transition={{ duration: 0.5 }} 
             className="alert alert-success sticky-alert"
             role="alert"
           >
